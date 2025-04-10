@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #1a1a1a;
+    color: #00ff00;
+    background-image: linear-gradient(rgba(0, 255, 0, 0.1) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(0, 255, 0, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.gaming-panel {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #00ff00;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+
+.gaming-input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    background: #000;
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.gaming-input::placeholder {
+    color: #00ff00;
+    opacity: 0.5;
+}
+
+.gaming-button {
+    padding: 15px 25px;
+    background-color: #000;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.gaming-button:hover {
+    background-color: #00ff00;
+    color: #000;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+}
+
+.error {
+    color: #ff0000;
+    margin-top: 10px;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.header {
+    padding: 20px;
+    border-bottom: 2px solid #00ff00;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#messageContainer {
+    height: 400px;
+    overflow-y: auto;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.message {
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 4px;
+    max-width: 70%;
+    font-size: 12px;
+}
+
+.sent {
+    background-color: rgba(0, 255, 0, 0.2);
+    border: 1px solid #00ff00;
+    margin-left: auto;
+}
+
+.received {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #00ff00;
+}
+
+.input-area {
+    padding: 20px;
+    border-top: 2px solid #00ff00;
+    display: flex;
+    gap: 10px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00ff00;
+    border-radius: 5px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+/* Add these new styles to your existing CSS file */
+.message {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.message-content {
+    flex-grow: 1;
+}
+
+.message-controls {
+    display: flex;
+    gap: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.message:hover .message-controls {
+    opacity: 1;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    color: #00ff00;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 2px 5px;
+    transition: all 0.3s ease;
+}
+
+.control-btn:hover {
+    transform: scale(1.2);
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
+.edit-btn:hover {
+    color: #00cc00;
+}
+
+.delete-btn:hover {
+    color: #ff0000;
+}
+.online-status {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    border: 2px solid #00ff00;
+    border-radius: 4px;
+    color: #00ff00;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.blink {
+    animation: blink 1s infinite;
+    color: #00ff00;
+}
+
+@keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
